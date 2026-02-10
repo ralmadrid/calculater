@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ألة حاسبه</title>
+    </head><style>
+    body {
+      font-family: sans-serif;
+    }
+    .bodyDarkMod {
+      background-color: black;
+    }
+    .calculatur {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .inp {
+      width: 100%;
+    }
+    input {
+      height: 20px;
+      width: 100%;
+      text-align: center;
+      color: whitesmoke;
+      font-weight: bold;
+      background-color: black;
+    }
+    .inputDarkMod {
+      color: black;
+      background-color: white;
+    }
+    input::placeholder {
+      color: whitesmoke;
+    }
+    button {
+      font-size: large;
+      font-weight: bold;
+      background-color: white;
+      color: black;
+    }
+    .buttonDarkMod {
+      background-color: black;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .blueDarkmod {
+      background-color: black;
+    }
+    .orang {
+      background-color: orange;
+    }
+    .orangDarkMod {
+      background-color: black;
+    }
+  </style>
+  <body>
+    <div class="inp">
+      <input type="text" placeholder="write here" id="input" />
+    </div>
+    <div class="calculatur">
+      <button onclick="fonctionCopyNum(1)">1</button>
+      <button onclick="fonctionCopyNum(2)">2</button>
+      <button onclick="fonctionCopyNum(3)">3</button>
+      <button class="blue" onclick="FonctionC()">C</button>
+      <button onclick="fonctionCopyNum(4)">4</button>
+      <button onclick="fonctionCopyNum(5)">5</button>
+      <button onclick="fonctionCopyNum(6)">6</button>
+      <button class="orang" onclick="fonctionCopyNum('-')">-</button>
+      <button onclick="fonctionCopyNum(7)">7</button>
+      <button onclick="fonctionCopyNum(8)">8</button>
+      <button onclick="fonctionCopyNum(9)">9</button>
+      <button class="orang" onclick="fonctionCopyNum('*')">x</button>
+      <button onclick="fonctionCopyNum(0)">0</button>
+      <button onclick="fonctionCopyNum('.')">,</button>
+      <button class="orang" onclick="fonctionCopyNum('+')">+</button>
+      <button class="orang" onclick="calculate()">=</button>
+    </div>
+    <button class="btn">برك عليا للوضع الليلي</button>
+    <script>
+      let input=document.getElementById("input")
+       let C=document.getElementById("C")
+        let 
+      fonctionCopyNum=(number)=>{ input.value+=number }
+       let FonctionC=()=>{ input.value="" }
+        let calculate=()=>{ input.value=eval(input.value) }; 
+        let btn=document.querySelector(".btn")
+        btn.addEventListener("click", function() { document.body.classList.toggle("bodyDarkMod");});
+    </script>
+  </body>
+</html>
